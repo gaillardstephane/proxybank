@@ -1,7 +1,9 @@
 package proxybankstef.persistance;
 
 import java.util.ArrayList;
-import classesMetiers.Client;
+
+import proxybankstef.metier.Client;
+
 
 /**
  * @author Stephane - Sarra 

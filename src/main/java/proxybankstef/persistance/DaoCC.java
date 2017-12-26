@@ -1,5 +1,7 @@
 package proxybankstef.persistance;
 
+import proxybankstef.metier.CompteCourant;
+
 public class DaoCC {
 
 

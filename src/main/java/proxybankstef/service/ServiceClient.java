@@ -1,14 +1,14 @@
 package proxybankstef.service;
 
 import java.util.ArrayList;
-import classesMetiers.Client;
+
+import proxybankstef.metier.Client;
 import proxybankstef.persistance.DaoClient;
 import proxybankstef.persistance.IDaoGeneric;
 
 /**
- * @author Stephane - Sarra
- *         couche intermediare du model 3 tiers, elle sert à isoler MVC
- *         et DAO. sa fonction est de relayer objets et variables
+ * @author Stephane - Sarra couche intermediare du model 3 tiers, elle sert à
+ *         isoler MVC et DAO. sa fonction est de relayer objets et variables
  */
 public class ServiceClient {
 

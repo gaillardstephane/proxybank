@@ -1,5 +1,7 @@
 package proxybankstef.metier;
 
+import javax.persistence.Entity;
+
 /**
  * @author Stephane - Sarra
  * @version 1.0 Cette classe regroupe les données relatives au client, deux
@@ -8,6 +10,8 @@ package proxybankstef.metier;
  *          CompteCourant et CompteEpargne afin d'aggreger cette classe aux
  *          comptes bancaire.
  */
+@Entity
+
 public class Client {
 
 	public static final String PARTICULIER = "particulier";

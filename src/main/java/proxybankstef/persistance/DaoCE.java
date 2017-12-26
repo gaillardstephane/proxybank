@@ -1,7 +1,7 @@
 package proxybankstef.persistance;
 
+import proxybankstef.metier.CompteEpargne;
 
-import classesMetiers.CompteEpargne;
 public class DaoCE {
 
 

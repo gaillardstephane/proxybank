@@ -1,5 +1,20 @@
 package proxybankstef.metier;
 
+
+
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
 /**
  * @author Stephane - Sarra
  * @version 1.0 La carte bancaire est une classe mère qui contient un
@@ -7,17 +22,33 @@ package proxybankstef.metier;
  *          carte et sa date d'expiration. Un boolean permet de valider sa
  *          validité.
  */
+
+@Entity
+@Table(name = "cartebancaire")
+@Inheritance(strategy = InheritanceType.JOINED)
 public class CarteBancaire {
 
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 		private int idCarteBancaire;
 		private int dateExpiration;
+		
+		@Temporal(TemporalType.TIMESTAMP)
+	    @Column(name = "created", nullable = false)
+		private Date created; 
 		private boolean cbValide = true;
 
 		// constructeur
+		
+		
 		public CarteBancaire(int idCarteBancaire, int dateExpiration) {
 			super();
 			this.idCarteBancaire = idCarteBancaire;
 			this.dateExpiration = dateExpiration;
+		}
+
+		public CarteBancaire() {
+			super();
 		}
 
 		// getteur setteur
@@ -59,6 +90,14 @@ public class CarteBancaire {
 		 */
 		public void desactiverCB() {
 			cbValide = false;
+		}
+
+		public Date getCreated() {
+			return created;
+		}
+
+		public void setCreated(Date created) {
+			this.created = created;
 		}
 
 	}

@@ -1,6 +1,6 @@
 package proxybankstef.service;
 
-import classesMetiers.Client;
+
 import proxybankstef.persistance.DaoClient;
 import proxybankstef.persistance.IDaoGeneric;
 
